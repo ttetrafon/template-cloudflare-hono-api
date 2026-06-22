@@ -5,12 +5,16 @@ import { TaskCreate } from "./endpoints/taskCreate";
 import { TaskDelete } from "./endpoints/taskDelete";
 import { TaskFetch } from "./endpoints/taskFetch";
 import { TaskList } from "./endpoints/taskList";
+import { env } from "cloudflare:workers";
 
 // Start a Hono app
 const app = new Hono<{ Bindings: Env }>();
 
+const corsOrigins = (env.CORS_ORIGIN || "*").split("\n");
+console.log("CORS_ORIGIN:", corsOrigins);
+
 app.use(cors({
-	origin: ["*"],
+	origin: corsOrigins,
 	allowMethods: ["GET", "POST", "DELETE", "OPTIONS", "PUT"],
 	allowHeaders: ["Content-Type", "Authorization"],
 }));
