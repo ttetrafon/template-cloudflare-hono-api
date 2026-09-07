@@ -7,15 +7,15 @@
     "pnpm": ">=11"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "5.20260823.1",
-    "@types/node": "26.2.0",
-    "wrangler": "4.125.0"
+    "@cloudflare/workers-types": "5.20260902.1",
+    "@types/node": "26.4.1",
+    "wrangler": "4.128.0"
   },
   "dependencies": {
     "chanfana": "3.4.0",
-    "hono": "4.13.3",
+    "hono": "4.13.5",
     "lodash": "^4.18.1",
-    "zod": "4.4.3"
+    "zod": "4.5.4"
   },
   "scripts": {
     "dev": "wrangler dev",
