@@ -4,3 +4,6 @@
 [submodule "library/lib-cf"]
 	path = library/lib-cf
 	url = git@github.com:ttetrafon/cloudflare-ts-lib.git
+[submodule "library/lib-be"]
+	path = library/lib-be
+	url = git@github.com:ttetrafon/typescript-lib-backend.git

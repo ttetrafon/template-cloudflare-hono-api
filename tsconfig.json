@@ -22,7 +22,15 @@
 			"./worker-configuration.d.ts",
 			"@types/node",
 			"node"
-		]
+		],
+		"paths": {
+			"~/*": [
+				"./src/*"
+			],
+			"lib/*": [
+				"./library/*"
+			]
+		}
 	},
 	"exclude": [
 		"node_modules",
@@ -30,7 +38,8 @@
 		"tests"
 	],
 	"include": [
-		"src",
+		"./src/**/*",
+		"./library/**/*",
 		"worker-configuration.d.ts"
 	]
 }
